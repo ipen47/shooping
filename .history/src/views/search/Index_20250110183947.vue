@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { getHistory, setHistory } from "@/utils/storage";
+import { getHistory } from "@/utils/storage";
 export default {
   name: "searchIndex",
   data() {
@@ -52,14 +52,10 @@ export default {
       }
       //将新的值添加到历史记录头部
       this.history.unshift(value);
-      setHistory(this.history);
-      //跳转到搜索列表页
-      this.$router.push(`/searchList?search=${value}`);
     },
     //清空历史记录
     clearHistory() {
       this.history = [];
-      setHistory([]);
     },
   },
 };

@@ -7,6 +7,7 @@
       v-model="searchValue"
       show-action
       placeholder="请输入搜索关键词"
+      @search="onSearch"
     >
       <template #action>
         <div class="searchBtn" @click="onSearch(searchValue)">搜索</div>
@@ -34,13 +35,12 @@
 </template>
 
 <script>
-import { getHistory, setHistory } from "@/utils/storage";
 export default {
   name: "searchIndex",
   data() {
     return {
       searchValue: "", //输入框的值
-      history: getHistory(), //历史记录
+      history: [], //历史记录
     };
   },
   methods: {
@@ -52,14 +52,6 @@ export default {
       }
       //将新的值添加到历史记录头部
       this.history.unshift(value);
-      setHistory(this.history);
-      //跳转到搜索列表页
-      this.$router.push(`/searchList?search=${value}`);
-    },
-    //清空历史记录
-    clearHistory() {
-      this.history = [];
-      setHistory([]);
     },
   },
 };

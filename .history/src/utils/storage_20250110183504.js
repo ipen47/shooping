@@ -16,13 +16,3 @@ export function setInfo(obj) {
 export function removeInfo() {
   return localStorage.removeItem(USER_INFO_KEY);
 }
-//获取历史记录
-export function getHistory() {
-  let result = window.localStorage.getItem(HISTORY_KEY);
-
-  return result ? JSON.parse(result) : [];
-}
-//设置历史记录
-export function setHistory(arr) {
-  localStorage.setItem(HISTORY_KEY, JSON.stringify(arr));
-}

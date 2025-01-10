@@ -7,6 +7,7 @@
       v-model="searchValue"
       show-action
       placeholder="请输入搜索关键词"
+      @search="onSearch"
     >
       <template #action>
         <div class="searchBtn" @click="onSearch(searchValue)">搜索</div>
@@ -16,7 +17,7 @@
     <div class="search-history">
       <div class="title">
         <span>最近搜索</span>
-        <van-icon @click="clearHistory" name="delete-o" />
+        <van-icon name="delete-o" />
       </div>
 
       <div class="list">
@@ -26,41 +27,26 @@
           :key="index"
           @click="onSearch(item)"
         >
-          {{ item }}
+          毛巾
         </div>
+        <div class="list-item" @click="$router.push('/searchList')">镜子</div>
+        <div class="list-item" @click="$router.push('/searchList')">拖鞋</div>
+        <div class="list-item" @click="$router.push('/searchList')">衣服</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { getHistory, setHistory } from "@/utils/storage";
 export default {
   name: "searchIndex",
   data() {
     return {
-      searchValue: "", //输入框的值
-      history: getHistory(), //历史记录
+      searchValue: "",
     };
   },
   methods: {
-    onSearch(value) {
-      const index = this.history.indexOf(value);
-      if (index !== -1) {
-        //存在相同值，将原有关键字移除
-        this.history.splice(index, 1);
-      }
-      //将新的值添加到历史记录头部
-      this.history.unshift(value);
-      setHistory(this.history);
-      //跳转到搜索列表页
-      this.$router.push(`/searchList?search=${value}`);
-    },
-    //清空历史记录
-    clearHistory() {
-      this.history = [];
-      setHistory([]);
-    },
+    onSearch() {},
   },
 };
 </script>

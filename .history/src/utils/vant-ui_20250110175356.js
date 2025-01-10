@@ -12,7 +12,6 @@ import {
   SwipeItem,
   Search,
   Grid,
-  Icon,
   GridItem,
 } from "vant";
 Vue.use(Icon);

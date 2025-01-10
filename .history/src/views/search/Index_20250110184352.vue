@@ -54,7 +54,7 @@ export default {
       this.history.unshift(value);
       setHistory(this.history);
       //跳转到搜索列表页
-      this.$router.push(`/searchList?search=${value}`);
+      this.$router.push(`/searchList?${value}`);
     },
     //清空历史记录
     clearHistory() {
