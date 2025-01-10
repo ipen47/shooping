@@ -8,7 +8,7 @@
       placeholder="请输入搜索关键词"
       shape="round"
       background="#f1f1f2"
-      @click="$router.push('/search')"
+      @click="$router.push('/login')"
     />
     <!-- 轮播图 -->
     <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
@@ -67,7 +67,7 @@ export default {
   },
   methods: {
     //获取首页数据
-    async getHomeData() {
+    getHomeData() {
       //调用后台接口
     },
   },

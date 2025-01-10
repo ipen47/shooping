@@ -11,8 +11,6 @@ import {
   Swipe,
   SwipeItem,
   Search,
-  Grid,
-  GridItem,
 } from "vant";
 Vue.use(Button);
 Vue.use(Search);
@@ -23,7 +21,3 @@ Vue.use(Tabbar);
 Vue.use(TabbarItem);
 Vue.use(NavBar);
 Vue.use(VanImage);
-Vue.use(Swipe);
-Vue.use(SwipeItem);
-Vue.use(Grid);
-Vue.use(GridItem);

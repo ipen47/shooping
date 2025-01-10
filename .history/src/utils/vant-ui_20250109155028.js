@@ -25,5 +25,3 @@ Vue.use(NavBar);
 Vue.use(VanImage);
 Vue.use(Swipe);
 Vue.use(SwipeItem);
-Vue.use(Grid);
-Vue.use(GridItem);

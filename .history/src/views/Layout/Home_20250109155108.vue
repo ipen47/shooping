@@ -8,7 +8,7 @@
       placeholder="请输入搜索关键词"
       shape="round"
       background="#f1f1f2"
-      @click="$router.push('/search')"
+      @click="$router.push('/login')"
     />
     <!-- 轮播图 -->
     <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
@@ -17,41 +17,18 @@
       /></van-swipe-item>
     </van-swipe>
     <!-- 导航 -->
-    <van-grid column-num="5" icon-size="40">
-      <van-grid-item
-        v-for="(item, index) in 10"
-        :key="index"
-        icon="https://peng12.oss-cn-beijing.aliyuncs.com/shopping/nav1.png"
-        text="新品首发"
-        to="/category"
-      />
+    <van-grid>
+      <van-grid-item icon="photo-o" text="文字" />
+      <van-grid-item icon="photo-o" text="文字" />
+      <van-grid-item icon="photo-o" text="文字" />
+      <van-grid-item icon="photo-o" text="文字" />
     </van-grid>
-    <!-- 主会场 -->
-    <div class="main">
-      <van-image
-        width="100%"
-        height="100%"
-        src="https://peng12.oss-cn-beijing.aliyuncs.com/shopping/main.png
-"
-      />
-    </div>
-    <!-- 猜你喜欢 -->
-    <div class="guess">
-      <p class="guess-title">-- 猜你喜欢 --</p>
-      <div class="good-list" v-for="(item, index) in 10" :key="index">
-        <GoodsItem></GoodsItem>
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
-import GoodsItem from "@/components/GoodsItem.vue";
 export default {
   name: "HomeIndex",
-  components: {
-    GoodsItem,
-  },
   data() {
     return {
       value: "",
@@ -62,15 +39,7 @@ export default {
       ],
     };
   },
-  created() {
-    this.getHomeData();
-  },
-  methods: {
-    //获取首页数据
-    async getHomeData() {
-      //调用后台接口
-    },
-  },
+  methods: {},
 };
 </script>
 
@@ -100,18 +69,5 @@ export default {
   height: 185px;
 
   background-color: #39a9ed;
-}
-//主会场
-.main {
-}
-//猜你喜欢
-.guess-title {
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-}
-//商品样式
-.good-list {
-  background-color: #f6f6f6;
 }
 </style>
