@@ -1,0 +1,23 @@
+<template>
+  <div>
+    <!-- 头部导航栏 -->
+    <van-nav-bar title="商品列表" left-arrow @click-left="$router.back(-1)" />
+    <!-- 搜索框部分 -->
+    <van-search
+      v-model="searchValue"
+      shape="round"
+      show-action
+      placeholder="请输入搜索关键词"
+    >
+      <template #action>
+        <van-icon name="apps-o" style="font-size: 18px" />
+      </template>
+    </van-search>
+  </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style lang="less" scoped></style>

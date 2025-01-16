@@ -54,7 +54,7 @@
               @click="getCode"
               >发送验证码</van-button
             >
-            <sapn v-else>{{ second + "秒后重新发送" }}</sapn>
+            <span v-else>{{ second + "秒后重新发送" }}</span>
           </template>
         </van-field>
       </van-cell-group>

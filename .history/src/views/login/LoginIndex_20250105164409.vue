@@ -58,7 +58,7 @@
               type="primary"
               >发送验证码</van-button
             >
-            <sapn>{{ second + 秒后重新发送 }}</sapn>
+            <span>{{ second + 秒后重新发送 }}</span>
           </template>
         </van-field>
       </van-cell-group>

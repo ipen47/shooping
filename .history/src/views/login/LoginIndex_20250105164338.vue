@@ -58,7 +58,7 @@
               type="primary"
               >发送验证码</van-button
             >
-            <sapn></sapn>
+            <span></span>
           </template>
         </van-field>
       </van-cell-group>
