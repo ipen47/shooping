@@ -8,4 +8,16 @@ npm/pnpm run serve
 
 ### 打包
 pnpm run build
-# 成果展示
+### 成果展示
+<img src="https://github.com/ipen47/img/blob/main/shopping-1.png">
+<img src="https://github.com/ipen47/img/blob/main/shopping-2.png">
+<img src="https://github.com/ipen47/img/blob/main/shopping-3.png">
+<img src="https://github.com/ipen47/img/blob/main/shopping-4.png">
+<img src="https://github.com/ipen47/img/blob/main/shopping-5.png">
+<img src="https://github.com/ipen47/img/blob/main/shopping-6.png">
+<img src="https://github.com/ipen47/img/blob/main/shopping-7.png">
+<img src="https://github.com/ipen47/img/blob/main/shopping-8.png">
+<img src="https://github.com/ipen47/img/blob/main/shopping-9.png">
+<img src="https://github.com/ipen47/img/blob/main/shopping-10.png">
+<img src="https://github.com/ipen47/img/blob/main/shopping-11.png">
+<img src="https://github.com/ipen47/img/blob/main/shopping-12.png">
